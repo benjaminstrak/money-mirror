@@ -492,15 +492,16 @@
 .description-container {
   text-align: center;
   max-width: 448px;
+  margin-top: -10px;
 }
 
 .description-text {
-  font-family: 'Geist Mono', monospace;
+  font-family: 'Pixelify Sans', sans-serif;
   color: white;
-  font-size: 18px;
+  font-size: 40px;
   line-height: 1.61;
   margin: 0;
-  font-weight: 500;
+  font-weight: normal;
 }
 
 /* Quiz Page Styles */

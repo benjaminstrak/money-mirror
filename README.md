@@ -107,6 +107,69 @@ The 16 personality types are:
 - **Descriptive**: High and Low are descriptive, not moral
 - **Pixelated Aesthetic**: Consistent retro gaming-inspired design throughout
 
+## Deployment
+
+### Option 1: Vercel (Recommended - Easiest)
+
+1. **Install Vercel CLI** (optional, or use web interface):
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Deploy via CLI**:
+   ```bash
+   vercel
+   ```
+   Follow the prompts, or deploy directly from GitHub:
+   - Go to [vercel.com](https://vercel.com)
+   - Sign in with GitHub
+   - Import the `money-mirror` repository
+   - Vercel will auto-detect React and configure it
+
+3. **Connect Custom Domain**:
+   - In Vercel dashboard, go to your project → Settings → Domains
+   - Add `moneymirror.me` and `www.moneymirror.me`
+   - Update your domain's DNS records:
+     - Add an A record pointing to Vercel's IP (they'll provide it)
+     - Or add a CNAME record pointing to `cname.vercel-dns.com`
+   - Vercel will handle SSL certificates automatically
+
+### Option 2: Netlify
+
+1. **Deploy via Netlify**:
+   - Go to [netlify.com](https://netlify.com)
+   - Sign in with GitHub
+   - Click "New site from Git" → Select `money-mirror`
+   - Build settings (auto-detected):
+     - Build command: `npm run build`
+     - Publish directory: `build`
+   - Click "Deploy site"
+
+2. **Connect Custom Domain**:
+   - Go to Site settings → Domain management
+   - Add custom domain: `moneymirror.me`
+   - Update DNS records as instructed by Netlify
+
+### Option 3: Traditional Hosting
+
+1. **Build the app**:
+   ```bash
+   npm run build
+   ```
+
+2. **Upload `build` folder** to your web server via FTP/SFTP
+
+3. **Configure web server** to serve `index.html` for all routes (required for React Router):
+   - **Apache**: Add `.htaccess` file in `build` folder
+   - **Nginx**: Configure `try_files` directive
+   - **Node.js**: Use `serve` package or Express with catch-all route
+
+### Important Notes
+
+- **React Router**: Requires server configuration to handle client-side routing
+- **HTTPS**: Ensure SSL certificate is set up for custom domain
+- **Environment Variables**: If needed, configure in hosting platform's dashboard
+
 ## Development
 
 ### Available Scripts

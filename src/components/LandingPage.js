@@ -121,8 +121,8 @@ function LandingPage() {
 
         {/* Description text */}
         <div className="description-container">
-          <p className="description-text adjustLetterSpacing">
-            Are you ready to learn your subconscious money beliefs?
+          <p className="description-text">
+            money is subconscious
           </p>
         </div>
       </div>
