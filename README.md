@@ -1,70 +1,230 @@
-# Getting Started with Create React App
+# Money Mirror
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A quiz application that identifies users' money personalities based on the Klontz Money Script Inventory. Discover your subconscious money beliefs through a 12-question assessment.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Money Mirror helps users understand their relationship with money by uncovering underlying money beliefs rather than judging financial outcomes. The quiz analyzes four money scripts (Money Avoidance, Money Worship, Money Status, and Money Vigilance) to classify users into one of 16 distinct money personalities.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **12-Question Quiz**: Comprehensive assessment using a 5-point Likert scale
+- **16 Personality Types**: Detailed personality classifications with reflective summaries
+- **Script Reflections**: Personalized insights for each of the four money scripts
+- **Pixelated Aesthetic**: Retro gaming-inspired design with smooth animations
+- **Session-Based**: No data persistence - answers are kept in memory during the session
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+- **React 19.1.0**: UI framework
+- **React Router DOM**: Client-side routing
+- **CSS3**: Custom styling with pixelated design system
+- **Google Fonts**: Pixelify Sans and Geist Mono fonts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+```
+src/
+├── components/
+│   ├── LandingPage.js      # Landing page with animated mirror
+│   ├── QuizPage.js         # 12-question quiz interface
+│   └── ResultsPage.js       # Personality results display
+├── data/
+│   ├── questions.js        # Quiz questions mapped to scripts
+│   ├── personalities.js    # 16 personality definitions
+│   └── scoring.js          # Scoring and classification logic
+├── utils/
+│   └── quizLogic.js       # Helper functions for validation
+├── App.js                  # Router setup and main app
+├── App.css                 # Global styles with pixelated theme
+└── index.js                # Entry point
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd money-mirror
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run eject`
+3. Start the development server:
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app will open at [http://localhost:3000](http://localhost:3000)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How It Works
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Quiz Flow
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Landing Page**: Users see the Money Mirror landing page with animated mirror effect
+2. **Quiz**: 12 questions with 5-point Likert scale (Strongly disagree to Strongly agree)
+3. **Scoring**: Each question maps to one of four money scripts
+4. **Classification**: Script scores are normalized to High/Low and mapped to a 4-letter profile
+5. **Results**: Users receive their personality type with detailed reflections
 
-## Learn More
+### Scoring Model
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Each script has 3 questions
+- Script score = sum of 3 question responses (range: 3-15)
+- Normalization:
+  - **High (H)**: Score ≥ 10
+  - **Low (L)**: Score < 10
+- 4-letter profile maps to one of 16 personalities
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Personality Types
 
-### Code Splitting
+The 16 personality types are:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- LLLL – The Bare Bones Boss
+- LLHL – The Quiet Maven
+- LHLL – Dollar Dandelion
+- LHHL – The Luxe Chaser
+- HLLL – The Cosmic Escapist
+- HLHL – The Velvet Ascender
+- HHLL – Freedom Hunter
+- HHHL – The Gilded Player
+- LLLH – Zen Penny
+- LLHH – Grounded Tycoon
+- LHLH – The Money Monk
+- LHHH – Gold Sentinel
+- HLLH – The Wealth Skeptic
+- HLHH – The Slow Flame
+- HHLH – Rainy Day Rebel
+- HHHH – Cautious Crown
 
-### Analyzing the Bundle Size
+## Design Principles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **No Judgment**: No personality is good or bad
+- **Reflective**: Results feel reflective, not diagnostic
+- **Descriptive**: High and Low are descriptive, not moral
+- **Pixelated Aesthetic**: Consistent retro gaming-inspired design throughout
 
-### Making a Progressive Web App
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Available Scripts
 
-### Advanced Configuration
+- `npm start`: Runs the app in development mode
+- `npm test`: Launches the test runner
+- `npm run build`: Builds the app for production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Key Files
 
-### Deployment
+- **Data Layer**: `src/data/` contains questions, personalities, and scoring logic
+- **Components**: `src/components/` contains page components
+- **Styling**: `src/App.css` contains all styles with pixelated theme
+- **Routing**: `src/App.js` sets up React Router
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Architecture
 
-### `npm run build` fails to minify
+### State Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Uses React `useState` for quiz answers (session-only)
+- Results passed via React Router's `navigate` with state
+- No persistence - all data cleared on page refresh
+
+### Routing
+
+- `/` - Landing page
+- `/quiz` - Quiz page
+- `/results` - Results page
+
+### Scoring Flow
+
+```
+Answers (12 values, 1-5)
+  ↓
+Calculate Script Scores (sum per script)
+  ↓
+Normalize to H/L (threshold: 10)
+  ↓
+Create 4-letter Profile (e.g., "HLLH")
+  ↓
+Map to Personality
+  ↓
+Display Results
+```
+
+## Contributing
+
+This is a private project. For questions or contributions, please contact the project maintainer.
+
+## License
+
+Private project - All rights reserved
+
+## Next Steps
+
+### Selfie Capture & AI-Generated Tarot Card
+
+The following features are planned for the next iteration:
+
+#### 1. Selfie Capture Step
+- **Location**: Add a new step after quiz completion, before results page
+- **Route**: `/capture` or integrate into quiz flow
+- **Features**:
+  - Request camera permissions using `navigator.mediaDevices.getUserMedia()`
+  - Display camera feed in a dithered viewfinder
+  - Capture selfie image
+  - Store image in state/session for processing
+
+#### 2. Dithered Camera Viewfinder
+- **Design**: Blue and white dithered pattern overlay
+- **Style**: Match existing pixelated aesthetic
+- **Implementation**: CSS `repeating-linear-gradient` or similar dithering pattern
+- **Visual**: Retro camera viewfinder feel with blue/white color scheme
+
+#### 3. AI Tarot Card Generation
+- **API**: ChatGPT Image API (DALL·E or similar)
+- **Input**: 
+  - User's selfie image
+  - Money personality type
+  - Personality name and characteristics
+- **Output**: Unique retro tarot card image representing the user's money personality
+- **Style**: Retro/pixelated aesthetic matching the app design
+- **Storage**: Store generated image URL or base64 in session state
+
+#### 4. Results Page Integration
+- **Display**: Show generated tarot card image on results page
+- **Layout**: Integrate with existing personality display
+- **Positioning**: Above or alongside personality summary
+- **Styling**: Match pixelated design system
+
+#### 5. Social Media Sharing
+- **Feature**: Share tarot card as social media story/post
+- **Format**: Optimized image card (e.g., 1080x1920 for stories)
+- **Implementation**: 
+  - Web Share API for native sharing
+  - Fallback to download option
+  - Include personality name/type in share card
+- **Design**: Nice social media card format with branding
+
+### Technical Considerations
+
+- **Camera Permissions**: Handle permission denial gracefully
+- **Image Processing**: May need to resize/optimize selfie before API call
+- **API Integration**: Set up ChatGPT Image API credentials
+- **Error Handling**: Handle API failures, network issues
+- **Privacy**: Consider image storage/retention policies
+- **Mobile Optimization**: Ensure camera works well on mobile devices
+
+### Implementation Order
+
+1. Add camera capture component with permissions
+2. Style dithered viewfinder (blue/white)
+3. Integrate ChatGPT Image API
+4. Generate tarot card from selfie + personality
+5. Display on results page
+6. Add social sharing functionality
+
+## Acknowledgments
+
+- Based on the Klontz Money Script Inventory
+- Design inspired by retro pixel art aesthetics
