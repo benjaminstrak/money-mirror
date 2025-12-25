@@ -301,10 +301,59 @@ The following features are planned for the next iteration:
 
 - **Camera Permissions**: Handle permission denial gracefully
 - **Image Processing**: May need to resize/optimize selfie before API call
-- **API Integration**: Set up ChatGPT Image API credentials
+- **API Integration**: Set up ChatGPT Image API credentials (see Setup section below)
 - **Error Handling**: Handle API failures, network issues
 - **Privacy**: Consider image storage/retention policies
 - **Mobile Optimization**: Ensure camera works well on mobile devices
+
+## Image Generation Setup
+
+### OpenAI API Key Configuration
+
+1. **Get an OpenAI API Key**:
+   - Go to [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+   - Create a new API key
+   - Copy the key
+
+2. **Set up Environment Variable for Local Development**:
+   - Create a `.env.local` file in the project root (if it doesn't exist)
+   - Add your API key:
+     ```
+     OPENAI_API_KEY=your_api_key_here
+     ```
+   - **Important**: Never commit the `.env.local` file to git (it should be in `.gitignore`)
+   - You can copy from `.env.local.example` as a template
+
+3. **Set up Environment Variable for Production (Vercel)**:
+   - Go to your Vercel project dashboard
+   - Navigate to Settings → Environment Variables
+   - Add `OPENAI_API_KEY` with your API key value
+   - Select all environments (Production, Preview, Development)
+
+4. **Run Local Development Server**:
+   - **Important**: Use `vercel dev` instead of `npm start` to run the API routes locally:
+     ```bash
+     vercel dev
+     ```
+   - This will start both the React app and the serverless API functions
+   - The app will be available at `http://localhost:3000`
+   - API routes will be available at `http://localhost:3000/api/*`
+
+### Prompt File
+
+The image generation uses prompts from `public/data/prompts.txt`. This file contains prompts for each of the 16 personality types. You can edit this file to customize the image generation prompts without changing code.
+
+**File Format**:
+```
+[PROFILE_CODE]: [PROMPT DESCRIPTION]
+```
+
+Example:
+```
+HLLH: A retro pixelated tarot card featuring the user's face as a thoughtful skeptic...
+```
+
+**Note**: Currently using DALL-E 3, which generates images based on text prompts. The prompts include instructions to incorporate the user's likeness. For more accurate likeness incorporation, consider using DALL-E 2's image editing API or a backend service that can combine images.
 
 ### Implementation Order
 

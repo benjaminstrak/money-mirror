@@ -1,0 +1,38 @@
+# Money Personality Tarot Card Prompts
+
+# Instructions: Each prompt should describe a retro tarot card image that incorporates the user's likeness.
+# The image should match the pixelated aesthetic of the app and represent the money personality type.
+# Use the format: [PROFILE_CODE]: [PROMPT]
+
+LLLL: A retro pixelated tarot card featuring the user's face as a minimalist sage. The card shows a simple, unadorned figure in earthy tones, surrounded by clean lines and empty space. The style is minimalist and zen-like, with pixelated textures. The background is sparse, emphasizing freedom from material clutter. The card has a vintage tarot aesthetic with ornate borders but minimal interior decoration.
+
+LLHL: A retro pixelated tarot card showing the user's face as a quiet achiever. The card features subtle symbols of success - small coins, gentle upward arrows, and soft golden accents. The style is understated elegance with pixelated textures. The background shows quiet ambition through gentle gradients and refined details. The card has a vintage tarot aesthetic with ornate borders and subtle status symbols.
+
+LHLL: A retro pixelated tarot card featuring the user's face as a joyful wanderer. The card shows a light, airy figure surrounded by floating coins and spontaneous bursts of color. The style is playful and free-spirited with pixelated textures. The background is vibrant and energetic, suggesting freedom and pleasure. The card has a vintage tarot aesthetic with ornate borders and whimsical decorative elements.
+
+LHHL: A retro pixelated tarot card showing the user's face as a luxury seeker. The card features opulent details - gold accents, elegant patterns, and symbols of refinement. The style is sophisticated and rich with pixelated textures. The background shows beauty and status through ornate decorations and luxurious elements. The card has a vintage tarot aesthetic with elaborate borders and premium details.
+
+HLLL: A retro pixelated tarot card featuring the user's face as a spiritual seeker. The card shows a dreamy, ethereal figure floating among clouds and abstract symbols. The style is mystical and otherworldly with pixelated textures. The background is soft and cosmic, suggesting distance from material concerns. The card has a vintage tarot aesthetic with ornate borders and spiritual symbols.
+
+HLHL: A retro pixelated tarot card showing the user's face as a careful climber. The card features upward paths, measured steps, and symbols of gradual progress. The style is intentional and values-driven with pixelated textures. The background shows cautious ambition through structured patterns and thoughtful design. The card has a vintage tarot aesthetic with ornate borders and symbols of measured growth.
+
+HHLL: A retro pixelated tarot card featuring the user's face as a freedom seeker. The card shows a bold figure breaking free from constraints, with symbols of escape and liberation. The style is dynamic and optimistic with pixelated textures. The background shows movement and possibility through flowing patterns and open spaces. The card has a vintage tarot aesthetic with ornate borders and symbols of freedom.
+
+HHHL: A retro pixelated tarot card showing the user's face as a magnetic performer. The card features bold, dramatic elements - spotlight effects, stage symbols, and symbols of recognition. The style is confident and show-stopping with pixelated textures. The background shows success and performance through dramatic lighting and impressive details. The card has a vintage tarot aesthetic with elaborate borders and performance symbols.
+
+LLLH: A retro pixelated tarot card featuring the user's face as a peaceful minimalist. The card shows a serene figure surrounded by simple, essential elements. The style is grounded and content with pixelated textures. The background is calm and uncluttered, emphasizing peace and simplicity. The card has a vintage tarot aesthetic with ornate borders but minimal interior decoration, focusing on essential beauty.
+
+LLHH: A retro pixelated tarot card showing the user's face as a practical achiever. The card features symbols of independence and competence - tools, structures, and symbols of self-reliance. The style is confident and grounded with pixelated textures. The background shows practical ambition through organized patterns and functional beauty. The card has a vintage tarot aesthetic with ornate borders and symbols of independence.
+
+LHLH: A retro pixelated tarot card featuring the user's face as a disciplined monk. The card shows a structured, reflective figure surrounded by organized patterns and symbols of restraint. The style is calm and disciplined with pixelated textures. The background shows order and peace through structured designs and meditative elements. The card has a vintage tarot aesthetic with ornate borders and symbols of discipline.
+
+LHHH: A retro pixelated tarot card showing the user's face as a protective guardian. The card features shields, fortresses, and symbols of security and preparation. The style is strong and vigilant with pixelated textures. The background shows protection and readiness through defensive patterns and symbols of safety. The card has a vintage tarot aesthetic with ornate borders and protective symbols.
+
+HLLH: A retro pixelated tarot card featuring the user's face as a thoughtful skeptic. The card shows a questioning figure surrounded by symbols of values and integrity. The style is reflective and principled with pixelated textures. The background shows skepticism and values through questioning patterns and symbols of integrity. The card has a vintage tarot aesthetic with ornate borders and symbols of thoughtful resistance.
+
+HLHH: A retro pixelated tarot card showing the user's face as a patient builder. The card features slow-burning flames, gradual progress, and symbols of thoughtful growth. The style is patient and intentional with pixelated textures. The background shows measured progress through gentle patterns and symbols of patience. The card has a vintage tarot aesthetic with ornate borders and symbols of steady growth.
+
+HHLH: A retro pixelated tarot card featuring the user's face as a strategic saver. The card shows a careful figure surrounded by symbols of security and independence - coins, vaults, and protective elements. The style is cautious but not joyless with pixelated textures. The background shows security through organized patterns and symbols of preparation. The card has a vintage tarot aesthetic with ornate borders and symbols of strategic planning.
+
+HHHH: A retro pixelated tarot card showing the user's face as a crowned planner. The card features crowns, elaborate structures, and symbols of high achievement and status. The style is ambitious and protective with pixelated textures. The background shows success and planning through complex patterns and symbols of achievement. The card has a vintage tarot aesthetic with elaborate borders and symbols of high status and careful planning.
+

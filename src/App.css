@@ -804,6 +804,216 @@
   opacity: 0.9;
 }
 
+/* Results selfie image */
+.results-selfie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 40px 0;
+}
+
+.results-selfie-image {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  clip-path: ellipse(90px 120px at center);
+  -webkit-clip-path: ellipse(90px 120px at center);
+  /* Apply same filters as camera view */
+  filter: grayscale(100%) contrast(300%) brightness(1.1) sepia(100%) hue-rotate(180deg) saturate(200%);
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  transform: scaleX(-1); /* Mirror for selfie view */
+}
+
+/* Results tarot card image */
+/* Generated Tarot Card Frame Styles */
+.results-tarot-frame {
+  margin: -45px auto 40px auto;
+  width: 240px;
+  max-width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px solid white;
+  padding: 15px 0;
+  background: #3498cb;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    );
+  background-size: 4px 4px;
+  transform: rotate(-3deg);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: transform 0.3s ease;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+.results-tarot-frame:hover {
+  transform: rotate(3deg);
+}
+
+/* Type number at top */
+.tarot-frame-number {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3498cb;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    );
+  background-size: 4px 4px;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+/* Image container with white border */
+.results-tarot-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  background: #3498cb; /* Fallback background */
+}
+
+.results-tarot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+/* Placeholder states for tarot card image container */
+.tarot-generating-placeholder,
+.tarot-error-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.tarot-generating-placeholder .generating-text,
+.tarot-error-placeholder .error-text {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Name box at bottom */
+.tarot-frame-name-box {
+  margin-top: 10px;
+  width: 100%;
+  padding: 0 12px;
+  background: #3498cb;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    );
+  background-size: 4px 4px;
+  border: none;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+.tarot-frame-name {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+/* Generating message */
+.generating-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 240px;
+}
+
+.generating-text {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+/* Generation error */
+.generation-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.error-text {
+  font-family: 'Geist Mono', monospace;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  text-align: center;
+}
+
 .personality-summary {
   margin-bottom: 50px;
   text-align: center;
@@ -911,6 +1121,11 @@
     width: 100vw;
     height: 100vh;
     height: 100dvh;
+  }
+  
+  .results-content {
+    padding-top: 100px !important;
+    padding-bottom: 40px;
   }
   
   .title-line-1 {
@@ -1666,3 +1881,478 @@
   animation: pixelateIn 0.6s ease-out;
 }
 */
+
+/* Camera Capture Styles */
+.camera-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.camera-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* Ornate frame background image container */
+.camera-frame-background {
+  position: absolute;
+  top: calc(50vh - 85px); /* Moved up 85px from center */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* Larger to ensure visibility */
+  height: 400px; /* Larger to ensure visibility */
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 1; /* Behind the viewfinder but visible */
+  pointer-events: none;
+}
+
+.camera-frame-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  opacity: 1;
+  display: block;
+}
+
+/* Random pixel blocking overlay for pixelated effect - only on opaque parts */
+.camera-frame-pixel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Create a random-looking pixel pattern that blocks pixels */
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.3) 2px,
+      rgba(0, 0, 0, 0.3) 4px,
+      transparent 4px,
+      transparent 6px,
+      rgba(0, 0, 0, 0.2) 6px,
+      rgba(0, 0, 0, 0.2) 8px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(0, 0, 0, 0.25) 3px,
+      rgba(0, 0, 0, 0.25) 5px,
+      transparent 5px,
+      transparent 7px,
+      rgba(0, 0, 0, 0.15) 7px,
+      rgba(0, 0, 0, 0.15) 9px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      transparent 1px,
+      rgba(0, 0, 0, 0.2) 1px,
+      rgba(0, 0, 0, 0.2) 3px,
+      transparent 3px,
+      transparent 5px,
+      rgba(0, 0, 0, 0.1) 5px,
+      rgba(0, 0, 0, 0.1) 7px
+    );
+  background-size: 8px 8px, 10px 10px, 6px 6px;
+  background-position: 0 0, 2px 2px, 1px 1px;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  z-index: 1; /* Above the image */
+  /* Mask to only show overlay on opaque parts of the PNG */
+  mask-image: var(--frame-image-url);
+  -webkit-mask-image: var(--frame-image-url);
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+
+.camera-viewfinder {
+  position: absolute;
+  top: calc(50vh - 85px); /* Moved up 85px */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 240px;
+  z-index: 10; /* In front of the frame background */
+  /* Pixelated mirror effect */
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+/* Inner content container - clips video to jagged pixelated oval */
+.camera-viewfinder-inner {
+  position: relative;
+  width: 180px;
+  height: 240px;
+  overflow: hidden;
+  background: #3498cb;
+  /* Jagged pixelated oval - use ellipse with a pixelated border overlay instead */
+  clip-path: ellipse(90px 120px at center);
+  -webkit-clip-path: ellipse(90px 120px at center);
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Permission prompt state */
+.camera-permission-prompt {
+  background: #3498cb;
+}
+
+.allow-camera-button {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 24px;
+  color: white;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+.allow-camera-button:hover {
+  opacity: 0.8;
+}
+
+/* Jagged pixelated border overlay */
+.camera-viewfinder-inner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Create jagged edge effect using a pixelated mask */
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(0, 0, 0, 0.1) 3px,
+      rgba(0, 0, 0, 0.1) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(0, 0, 0, 0.1) 3px,
+      rgba(0, 0, 0, 0.1) 4px
+    );
+  background-size: 4px 4px;
+  /* Mask to create jagged oval edge */
+  mask: 
+    radial-gradient(ellipse 92px 122px at center, transparent 95%, black 95%, black 100%),
+    radial-gradient(ellipse 90px 120px at center, black 100%, transparent 100%);
+  -webkit-mask: 
+    radial-gradient(ellipse 92px 122px at center, transparent 95%, black 95%, black 100%),
+    radial-gradient(ellipse 90px 120px at center, black 100%, transparent 100%);
+  mask-composite: subtract;
+  -webkit-mask-composite: subtract;
+  pointer-events: none;
+  z-index: 2;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+/* Pixel blocks around the edge of the frame */
+.camera-viewfinder::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: -16px;
+  bottom: -16px;
+  border-radius: 50%;
+  /* Create pixelated border blocks using repeating pattern - much bigger blocks */
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      white 0px,
+      white 16px,
+      rgba(52, 152, 203, 0.5) 16px,
+      rgba(52, 152, 203, 0.5) 32px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      white 0px,
+      white 16px,
+      rgba(52, 152, 203, 0.5) 16px,
+      rgba(52, 152, 203, 0.5) 32px
+    );
+  background-size: 32px 32px;
+  z-index: -1;
+  pointer-events: none;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  /* Create border ring effect - only show pixels on the border */
+  mask: 
+    radial-gradient(ellipse 106px 136px at center, transparent 92%, black 92%, black 100%),
+    radial-gradient(ellipse 90px 120px at center, black 100%, transparent 100%);
+  -webkit-mask: 
+    radial-gradient(ellipse 106px 136px at center, transparent 92%, black 92%, black 100%),
+    radial-gradient(ellipse 90px 120px at center, black 100%, transparent 100%);
+  mask-composite: subtract;
+  -webkit-mask-composite: subtract;
+}
+
+.camera-viewfinder > * {
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.camera-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1); /* Mirror the video for selfie view */
+  /* Convert to grayscale, high contrast, and tint blue for mirror effect */
+  filter: grayscale(100%) contrast(300%) brightness(1.1) sepia(100%) hue-rotate(180deg) saturate(200%);
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+}
+
+.camera-captured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1); /* Mirror the image for selfie view */
+  /* Apply same filters as video */
+  filter: grayscale(100%) contrast(300%) brightness(1.1) sepia(100%) hue-rotate(180deg) saturate(200%);
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  display: block;
+}
+
+.dithered-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+  /* Blue and white dithered pixel pattern that creates live dithering effect */
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(52, 152, 203, 0.6) 0px,
+      rgba(52, 152, 203, 0.6) 2px,
+      rgba(255, 255, 255, 0.6) 2px,
+      rgba(255, 255, 255, 0.6) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(52, 152, 203, 0.6) 0px,
+      rgba(52, 152, 203, 0.6) 2px,
+      rgba(255, 255, 255, 0.6) 2px,
+      rgba(255, 255, 255, 0.6) 4px
+    );
+  background-size: 4px 4px;
+  mix-blend-mode: multiply;
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+}
+
+.viewfinder-frame {
+  display: none; /* Hide the frame overlay */
+}
+
+.camera-instructions {
+  position: absolute;
+  top: calc(50vh + 140px); /* Position below viewfinder (120px viewfinder height + 20px spacing) */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+.camera-instruction-text {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Countdown overlay */
+.countdown-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.countdown-number {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 120px;
+  color: white;
+  text-shadow: 
+    4px 4px 0px rgba(52, 152, 203, 0.8),
+    8px 8px 0px rgba(0, 0, 0, 0.5);
+  image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  animation: countdownPulse 0.3s ease-out;
+}
+
+@keyframes countdownPulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Flash effect */
+.flash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 15;
+  pointer-events: none;
+  animation: flashFade 0.2s ease-out;
+}
+
+@keyframes flashFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.camera-actions {
+  position: absolute;
+  top: calc(50vh + 200px); /* Position below instructions */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.capture-button {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  padding: 16px 32px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+.capture-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.capture-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.skip-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  padding: 16px 48px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+.skip-button:hover:not(:disabled) {
+  border-color: white;
+  color: white;
+}
+
+.skip-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.camera-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.camera-error-text {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: white;
+  font-size: 22px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Mobile styles for camera */
+@media (max-width: 768px) {
+  .camera-viewfinder {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .camera-instruction-text {
+    font-size: 20px;
+  }
+
+  .camera-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .capture-button,
+  .skip-button {
+    width: 100%;
+  }
+}

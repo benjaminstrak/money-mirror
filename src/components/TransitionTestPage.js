@@ -128,6 +128,12 @@ function TransitionTestPage() {
           </button>
           <button 
             className="transition-button" 
+            onClick={() => navigate('/capture')}
+          >
+            → Camera Capture
+          </button>
+          <button 
+            className="transition-button" 
             onClick={() => navigate('/results')}
           >
             → Results Page

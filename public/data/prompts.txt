@@ -1,0 +1,67 @@
+MASTER PROMPT (APPLIES TO ALL CARDS)
+
+A tarot-style bitmap graphic pixel-art illustration featuring a single central human figure, clearly visible from the torso up, with a face that closely resembles the provided reference photo.
+The figure is non-gendered, wearing a simplified symbolic garment (tunic, robe, or patterned costume), designed to preserve facial structure for likeness transfer.
+
+The composition uses dramatic contrast:
+- the upper portion of the image is visually dense, filled with symbolic elements related to money, desire, safety, or ambition
+- the lower portion is restrained, calm, and spacious
+
+Rendered in a coarse pixel-art style with heavy pixellation and ordered dithering, visible pixel structure, like 80s early bitmap graphics.
+Palette is tonally unified with a blue rinse: sky blues, cloud whites, pale steel blues, muted golds rendered through blue toning.
+Background is a flat but active blue field with clouds, celestial or architectural motifs.
+Lighting is flat and emblematic, not cinematic.
+Overall feeling: symbolically rich, contemplative, restrained, timeless.
+
+NEGATIVE PROMPT (ALL CARDS)
+hyperrealism, cinematic lighting, painterly brushstrokes, anime, 3D render, modern clothing, text, typography, exaggerated facial expression, hats obscuring face, sunglasses, empty background, minimalism
+
+CARD-SPECIFIC PROMPTS
+
+THE BARE BONES BOSS (LLLL)
+The human stands upright, arms outstretched. Behind them, a faint skeletal outline aligns subtly with their posture. The upper area contains minimal symbols — structure without abundance. The composition feels light, uncluttered, disciplined.
+
+THE QUIET MAVEN (LLHL)
+The human stands composed, hands clasped as if in prayer. Their head is cocked and their expression quizzical. Above them float subtle symbols of achievement — ordered coins, architectural motifs — neat rather than lavish. Density suggests ambition without display.
+
+DOLLAR DANDELION (LHLL)
+The human holds a dandelion at chest height and reaches upwards with another. They are laughing. Above them, seeds expand into a loose constellation of coins and symbols, already dispersing. The density feels fleeting, joyful, impermanent.
+
+THE LUXE CHASER (LHHL)
+The human reaches upward toward a large, overflowing illustrated field of jewels, coins, and gems occupying the upper third of the image. Treasure is abundant, oversized, densely packed. The lower portion remains sparse. Expression is intent and open-mouthed.
+
+THE COSMIC ESCAPIST (HLLL)
+The human points upward with their eyes closed. Above them are abstract celestial forms rather than money — stars, clouds, halos. Wealth symbols are faint, distant, partially obscured.
+
+THE VELVET ASCENDER (HLHL)
+The human climbs a ladder upwards, their expression determined. Above them are structured vertical symbols — ladders, steps, aligned coins. Density implies progress, not excess.
+
+FREEDOM HUNTER (HHLL)
+The human leans forward dynamically laughing, one arm stretched behind as if they are about to run. Above them stretch open paths and expansive skies. Density conveys possibility more than possession.
+
+THE GILDED PLAYER (HHHL)
+The human casts a single die upwards, their expression manic and theatrical. Above them swirl symbols of chance — dice, coins, gems — arranged theatrically and with a sense of risk.
+
+ZEN PENNY (LLLH)
+The human sits with their eyes closed and arms folded. Above the human floats a single enlarged coin, calm and centered, surrounded by emptiness. Density replaced by stillness.
+
+GROUNDED TYCOON (LLHH)
+The human points directly at the camera with a face full of boldness and determination, Above the human appear stable, stacked symbols — blocks, coins, foundations — carefully arranged. Density communicates control and independence.
+
+THE MONEY MONK (LHLH)
+The human is hooded and their eyes are closed in prayer. They are holding a rosary with a dollar sign, loosely draped around their neck. The upper space contains ordered, repeated symbols arranged ritualistically. Density feels disciplined and intentional.
+
+GOLD SENTINEL (LHHH)
+The human holds a shield above their head. Their expression is wary. Above the human are protective symbols — shields, coins, stars, columns — arranged defensively. Density conveys preparedness.
+
+THE WEALTH SKEPTIC (HLLH)
+The human is holding a small jewel at arms length and gazing at it questioningly. Above the human appear unstable or questioning symbols — tilted coins, fractured shapes. Density feels uneasy.
+
+THE SLOW FLAME (HLHH)
+A human holding a small candle close to the chest. The flame is modest, steady. The face is contemplative, eyes focused inward. The posture is patient, unhurried. The surrounding space is quiet, reinforcing timing over urgency. Above the human floats a modest but concentrated cluster of softly glowing symbols. Density is contained and patient.
+
+RAINY DAY REBEL (HHLH)
+A human holding a small candle close to the chest. The flame is modest, steady. The face is contemplative, eyes focused inward. The posture is patient, unhurried. The surrounding space is quiet, reinforcing timing over urgency. Above the human is abundance held back — coins behind clouds, rain transformed into symbols. Density suggests preparedness without indulgence.
+
+CAUTIOUS CROWN (HHHH)
+Above the human floats a crown, not worn. Surrounding it are symmetrical symbols of power and wealth, guarded and controlled. Density equals protection, not excess.

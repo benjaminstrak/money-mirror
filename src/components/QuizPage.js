@@ -60,7 +60,8 @@ function QuizPage() {
 
     try {
       const results = processQuizAnswers(answers);
-      navigate('/results', { state: { results } });
+      // Navigate to loading2 page, passing results
+      navigate('/loading2', { state: { results, answers } });
     } catch (error) {
       console.error('Error processing quiz:', error);
       alert('An error occurred. Please try again.');
@@ -131,7 +132,7 @@ function QuizPage() {
               onClick={handleComplete}
               disabled={!validateAnswers(answers)}
             >
-              Complete
+              SUBMIT
             </button>
           ) : (
             <button
