@@ -51,14 +51,11 @@
   min-height: 100svh; /* Best on modern iOS - excludes browser UI */
   min-height: 100dvh; /* Also good - dynamic viewport height */
   min-height: 100vh; /* Fallback */
-  background-image: url('./background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Background image is set on html/body to extend behind browser chrome */
+  background: transparent;
   overflow: hidden;
   margin: 0;
   padding: 0;
-  /* Ensure it fills entire screen including behind status bar */
   -webkit-overflow-scrolling: touch;
 }
 

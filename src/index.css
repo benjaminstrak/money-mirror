@@ -9,13 +9,19 @@
 html, body {
   height: 100%;
   margin: 0;
-  background: #3498cb; /* Sky blue background to fill any gaps */
+  background-color: #3498cb; /* Fallback color */
+  background-image: url('./background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Allows background to extend behind browser chrome */
 }
 
 html {
   padding: 0;
   width: 100%;
-  height: 100dvh; /* Dynamic viewport height for mobile */
+  min-height: 100lvh; /* Large viewport height - includes space behind browser UI */
+  min-height: 100dvh; /* Fallback */
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
@@ -24,8 +30,9 @@ body {
   padding: 0;
   width: 100%;
   width: 100vw;
-  height: 100vh;
-  height: 100dvh; /* Dynamic viewport height for mobile */
+  min-height: 100vh;
+  min-height: 100lvh; /* Large viewport height - includes space behind browser UI */
+  min-height: 100dvh; /* Fallback */
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -45,7 +52,8 @@ body {
   width: 100vw;
   height: 100%;
   height: 100vh;
-  height: 100dvh;
+  height: 100lvh; /* Large viewport height - includes space behind browser UI */
+  height: 100dvh; /* Fallback */
   margin: 0;
   padding: 0;
   position: fixed;
