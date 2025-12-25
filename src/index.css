@@ -9,12 +9,55 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: #3498cb; /* Fallback color */
+  background-color: #3498cb; /* Fallback color - matches background */
+}
+
+html {
+  padding: 0;
+  width: 100%;
+  min-height: 100lvh; /* Large viewport height - includes space behind browser UI */
+  min-height: 100dvh; /* Fallback */
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+/* Background image wrapper that extends beyond viewport */
+html::before {
+  content: '';
+  position: fixed;
+  top: -150px; /* Extend above to cover browser chrome area */
+  left: 0;
+  right: 0;
+  bottom: -150px; /* Extend below to cover browser chrome area */
   background-image: url('./background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Allows background to extend behind browser chrome */
+  z-index: -1;
+  width: 100vw;
+  height: calc(100vh + 300px); /* Taller than viewport */
+}
+
+body {
+  padding: 0;
+  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
+  min-height: 100lvh; /* Large viewport height - includes space behind browser UI */
+  min-height: 100dvh; /* Fallback */
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
 }
 
 html {
