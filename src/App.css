@@ -42,18 +42,15 @@
 
 .app-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh; /* Dynamic viewport height for mobile */
-  height: 100svh; /* Small viewport height - excludes browser UI */
-  min-height: 100vh;
-  min-height: 100dvh;
-  min-height: 100svh;
+  top: -100px;
+  left: -100px;
+  right: -100px;
+  bottom: -100px;
+  width: calc(100vw + 200px);
+  height: calc(100vh + 200px);
+  height: calc(100dvh + 200px);
+  min-height: calc(100vh + 200px);
+  min-height: calc(100dvh + 200px);
   background-image: url('./background.png');
   background-size: cover;
   background-position: center;
@@ -61,7 +58,7 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
-  /* Ensure it fills entire screen including behind status bar */
+  /* Extend background beyond viewport to cover browser chrome areas */
   -webkit-overflow-scrolling: touch;
 }
 

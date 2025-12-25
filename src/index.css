@@ -14,6 +14,7 @@ html {
   height: 100dvh; /* Dynamic viewport height for mobile */
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
+  background-color: #3498cb; /* Match the blue background color */
 }
 
 body {
@@ -30,6 +31,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: #3498cb; /* Match the blue background color */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
