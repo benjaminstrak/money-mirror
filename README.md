@@ -225,11 +225,39 @@ Private project - All rights reserved
 
 ## Next Steps
 
+### UI/UX Improvements
+
+The following improvements are planned for the next iteration:
+
+#### 1. Quiz Loading Messages
+- **Purpose**: Provide feedback during quiz processing/scoring
+- **Implementation**: 
+  - Show loading state after quiz completion
+  - Display pixelated loading messages/animations
+  - Match retro aesthetic with animated text or patterns
+- **Location**: Between quiz completion and results page
+
+#### 2. Screen Transitions
+- **Purpose**: Smooth, polished transitions between pages
+- **Implementation**:
+  - Add CSS transitions/animations between routes
+  - Fade, slide, or pixelated transition effects
+  - Ensure transitions match pixelated design theme
+- **Routes**: Landing → Quiz → Results (and back)
+
+#### 3. Results Design Refinement
+- **Purpose**: Polish and improve results page visual design
+- **Areas to refine**:
+  - Layout spacing and hierarchy
+  - Typography and readability
+  - Card styling and visual elements
+  - Overall pixelated aesthetic consistency
+
 ### Selfie Capture & AI-Generated Tarot Card
 
 The following features are planned for the next iteration:
 
-#### 1. Selfie Capture Step
+#### 4. Selfie Capture Step
 - **Location**: Add a new step after quiz completion, before results page
 - **Route**: `/capture` or integrate into quiz flow
 - **Features**:
@@ -238,13 +266,13 @@ The following features are planned for the next iteration:
   - Capture selfie image
   - Store image in state/session for processing
 
-#### 2. Dithered Camera Viewfinder
+#### 5. Dithered Camera Viewfinder
 - **Design**: Blue and white dithered pattern overlay
 - **Style**: Match existing pixelated aesthetic
 - **Implementation**: CSS `repeating-linear-gradient` or similar dithering pattern
 - **Visual**: Retro camera viewfinder feel with blue/white color scheme
 
-#### 3. AI Tarot Card Generation
+#### 6. AI Tarot Card Generation
 - **API**: ChatGPT Image API (DALL·E or similar)
 - **Input**: 
   - User's selfie image
@@ -254,13 +282,13 @@ The following features are planned for the next iteration:
 - **Style**: Retro/pixelated aesthetic matching the app design
 - **Storage**: Store generated image URL or base64 in session state
 
-#### 4. Results Page Integration
+#### 7. Results Page Integration
 - **Display**: Show generated tarot card image on results page
 - **Layout**: Integrate with existing personality display
 - **Positioning**: Above or alongside personality summary
 - **Styling**: Match pixelated design system
 
-#### 5. Social Media Sharing
+#### 8. Social Media Sharing
 - **Feature**: Share tarot card as social media story/post
 - **Format**: Optimized image card (e.g., 1080x1920 for stories)
 - **Implementation**: 
@@ -280,12 +308,15 @@ The following features are planned for the next iteration:
 
 ### Implementation Order
 
-1. Add camera capture component with permissions
-2. Style dithered viewfinder (blue/white)
-3. Integrate ChatGPT Image API
-4. Generate tarot card from selfie + personality
-5. Display on results page
-6. Add social sharing functionality
+1. Add quiz loading messages
+2. Finesse transitions between screens
+3. Refine results design
+4. Add camera capture component with permissions
+5. Style dithered viewfinder (blue/white)
+6. Integrate ChatGPT Image API
+7. Generate tarot card from selfie + personality
+8. Display on results page
+9. Add social sharing functionality
 
 ## Acknowledgments
 

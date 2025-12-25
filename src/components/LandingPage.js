@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import RandomPixelOverlay from './RandomPixelOverlay';
 import '../App.css';
 
 function LandingPage() {
   const navigate = useNavigate();
+  const [showExitTransition, setShowExitTransition] = useState(false);
 
   // Create the mirror pattern dots (only outer edge) in sequential order
   const createMirrorPattern = () => {
@@ -83,11 +85,20 @@ function LandingPage() {
   };
 
   const handleStartClick = () => {
-    navigate('/quiz');
+    // Show exit animation first
+    setShowExitTransition(true);
+    
+    // Wait for exit animation to complete (1.5s), then navigate
+    setTimeout(() => {
+      navigate('/loading');
+    }, 1500);
   };
 
   return (
     <div className="app-container">
+      {/* Exit transition overlay */}
+      {showExitTransition && <RandomPixelOverlay isActive={true} mode="exit" />}
+      
       {/* Cloud background pattern */}
       <div className="cloud-background">
         <div className="cloud cloud-1"></div>
@@ -122,8 +133,27 @@ function LandingPage() {
         {/* Description text */}
         <div className="description-container">
           <p className="description-text">
-            money is subconscious
+            a project by benjamin strak
           </p>
+        </div>
+
+        {/* Test transitions link */}
+        <div style={{ marginTop: '40px' }}>
+          <button 
+            className="test-link-button" 
+            onClick={() => navigate('/test-transitions')}
+            style={{ 
+              background: 'transparent', 
+              border: 'none', 
+              color: 'rgba(255, 255, 255, 0.5)',
+              fontFamily: "'Geist Mono', monospace",
+              fontSize: '12px',
+              cursor: 'pointer',
+              textDecoration: 'underline'
+            }}
+          >
+            Test Transitions
+          </button>
         </div>
       </div>
     </div>

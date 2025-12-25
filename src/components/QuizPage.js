@@ -122,7 +122,7 @@ function QuizPage() {
             onClick={handlePrevious}
             disabled={currentQuestion === 0}
           >
-            Previous
+            BACK
           </button>
           
           {currentQuestion === TOTAL_QUESTIONS - 1 ? (
@@ -139,7 +139,7 @@ function QuizPage() {
               onClick={handleNext}
               disabled={currentAnswer === null}
             >
-              Next
+              NEXT
             </button>
           )}
         </div>
