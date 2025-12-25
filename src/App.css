@@ -41,22 +41,28 @@
 /* Money Mirror Landing Page Styles */
 
 .app-container {
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh; /* Dynamic viewport height for mobile */
-  min-height: 100vh;
-  min-height: 100dvh;
-  background-image: url('./background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100vw;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for mobile */
+  height: 100svh; /* Small viewport height - excludes browser UI */
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100svh;
+  background-image: url('./background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
-  /* No padding on container - background should fill entire screen */
+  margin: 0;
+  padding: 0;
+  /* Ensure it fills entire screen including behind status bar */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Dithering overlay effect - creates a pixelated noise pattern */
