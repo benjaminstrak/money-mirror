@@ -48,12 +48,9 @@
   bottom: 0;
   width: 100vw;
   width: 100%;
-  height: 100vh;
-  height: 100dvh; /* Dynamic viewport height for mobile */
-  height: 100lvh; /* Large viewport height - includes space behind browser UI */
-  min-height: 100vh;
-  min-height: 100dvh;
-  min-height: 100lvh;
+  min-height: 100svh; /* Best on modern iOS - excludes browser UI */
+  min-height: 100dvh; /* Also good - dynamic viewport height */
+  min-height: 100vh; /* Fallback */
   background-image: url('./background.png');
   background-size: cover;
   background-position: center;
