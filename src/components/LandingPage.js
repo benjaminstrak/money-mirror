@@ -133,27 +133,8 @@ function LandingPage() {
         {/* Description text */}
         <div className="description-container">
           <p className="description-text">
-            a project by benjamin strak
+            a project by ben strak
           </p>
-        </div>
-
-        {/* Test transitions link */}
-        <div style={{ marginTop: '40px' }}>
-          <button 
-            className="test-link-button" 
-            onClick={() => navigate('/test-transitions')}
-            style={{ 
-              background: 'transparent', 
-              border: 'none', 
-              color: 'rgba(255, 255, 255, 0.5)',
-              fontFamily: "'Geist Mono', monospace",
-              fontSize: '12px',
-              cursor: 'pointer',
-              textDecoration: 'underline'
-            }}
-          >
-            Test Transitions
-          </button>
         </div>
       </div>
     </div>

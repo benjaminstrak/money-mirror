@@ -225,83 +225,58 @@ Private project - All rights reserved
 
 ## Next Steps
 
-### UI/UX Improvements
+### 1. Updates to Loading Page Timings
+- **Purpose**: Refine and optimize loading page animation timings
+- **Areas to update**:
+  - Adjust word-by-word display timings for better pacing
+  - Fine-tune ellipsis animation timing
+  - Optimize transition delays between loading states
+  - Ensure smooth flow from loading to next screen
 
-The following improvements are planned for the next iteration:
+### 2. Refinements to Results Page
+- **Image Loading**:
+  - Improve loading states and transitions for tarot card image
+  - Add smooth fade-in animation when image loads
+  - Handle loading errors gracefully with fallback UI
+  - Optimize image display performance
+- **Further Info Page**:
+  - Create additional details page/section for personality insights
+  - Add expandable sections for deeper personality information
+  - Include additional resources or explanations
+  - Improve navigation between results and detailed info
 
-#### 1. Quiz Loading Messages
-- **Purpose**: Provide feedback during quiz processing/scoring
+### 3. One Click Sharing to Social Media
+- **Feature**: Share tarot card and results with one click
 - **Implementation**: 
-  - Show loading state after quiz completion
-  - Display pixelated loading messages/animations
-  - Match retro aesthetic with animated text or patterns
-- **Location**: Between quiz completion and results page
+  - Web Share API for native sharing (iOS/Android)
+  - Fallback to platform-specific sharing (Twitter, Facebook, Instagram)
+  - Generate optimized share card image (1080x1920 for stories)
+  - Include personality name, type, and tarot card image
+  - Add share button to results page
+- **Design**: Pixelated share card matching app aesthetic
+- **Platforms**: Instagram Stories, Twitter, Facebook, WhatsApp, etc.
 
-#### 2. Screen Transitions
-- **Purpose**: Smooth, polished transitions between pages
+### 4. Send Results to Email
+- **Feature**: Allow users to email their results
 - **Implementation**:
-  - Add CSS transitions/animations between routes
-  - Fade, slide, or pixelated transition effects
-  - Ensure transitions match pixelated design theme
-- **Routes**: Landing → Quiz → Results (and back)
-
-#### 3. Results Design Refinement
-- **Purpose**: Polish and improve results page visual design
-- **Areas to refine**:
-  - Layout spacing and hierarchy
-  - Typography and readability
-  - Card styling and visual elements
-  - Overall pixelated aesthetic consistency
-
-### Selfie Capture & AI-Generated Tarot Card
-
-The following features are planned for the next iteration:
-
-#### 4. Selfie Capture Step
-- **Location**: Add a new step after quiz completion, before results page
-- **Route**: `/capture` or integrate into quiz flow
-- **Features**:
-  - Request camera permissions using `navigator.mediaDevices.getUserMedia()`
-  - Display camera feed in a dithered viewfinder
-  - Capture selfie image
-  - Store image in state/session for processing
-
-#### 5. Dithered Camera Viewfinder
-- **Design**: Blue and white dithered pattern overlay
-- **Style**: Match existing pixelated aesthetic
-- **Implementation**: CSS `repeating-linear-gradient` or similar dithering pattern
-- **Visual**: Retro camera viewfinder feel with blue/white color scheme
-
-#### 6. AI Tarot Card Generation
-- **API**: ChatGPT Image API (DALL·E or similar)
-- **Input**: 
-  - User's selfie image
-  - Money personality type
-  - Personality name and characteristics
-- **Output**: Unique retro tarot card image representing the user's money personality
-- **Style**: Retro/pixelated aesthetic matching the app design
-- **Storage**: Store generated image URL or base64 in session state
-
-#### 7. Results Page Integration
-- **Display**: Show generated tarot card image on results page
-- **Layout**: Integrate with existing personality display
-- **Positioning**: Above or alongside personality summary
-- **Styling**: Match pixelated design system
-
-#### 8. Social Media Sharing
-- **Feature**: Share tarot card as social media story/post
-- **Format**: Optimized image card (e.g., 1080x1920 for stories)
-- **Implementation**: 
-  - Web Share API for native sharing
-  - Fallback to download option
-  - Include personality name/type in share card
-- **Design**: Nice social media card format with branding
+  - Backend email service (SendGrid, Mailgun, or similar)
+  - Generate formatted email with personality results
+  - Include tarot card image as attachment or inline image
+  - Email template matching app design aesthetic
+  - Add email input form on results page
+- **Content**: 
+  - Personality name and type
+  - Tarot card image
+  - Personality summary
+  - Script reflections
+  - Link back to app
 
 ### Technical Considerations
 
-- **Camera Permissions**: Handle permission denial gracefully
-- **Image Processing**: May need to resize/optimize selfie before API call
-- **API Integration**: Set up ChatGPT Image API credentials (see Setup section below)
+- **Email Service**: Set up email API credentials (SendGrid/Mailgun)
+- **Image Optimization**: Ensure tarot card images are optimized for email clients
+- **Share Card Generation**: May need canvas API to generate shareable image
+- **Error Handling**: Graceful fallbacks for sharing/email failures
 - **Error Handling**: Handle API failures, network issues
 - **Privacy**: Consider image storage/retention policies
 - **Mobile Optimization**: Ensure camera works well on mobile devices

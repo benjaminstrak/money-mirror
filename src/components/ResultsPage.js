@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { processQuizAnswers } from '../data/scoring';
 import { formatProfile } from '../utils/quizLogic';
@@ -12,6 +12,8 @@ function ResultsPage() {
   const [generatedImageUrl, setGeneratedImageUrl] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generationError, setGenerationError] = useState(null);
+  const tarotCardRef = useRef(null);
+  const [deviceRotation, setDeviceRotation] = useState(-3); // Start with default -3deg
   
   // Debug: Log state changes
   useEffect(() => {
@@ -40,6 +42,45 @@ function ResultsPage() {
 
   // Safety check for scriptReflections
   const scriptReflections = personality?.scriptReflections || {};
+
+  // Accelerometer control for mobile tarot card rotation
+  useEffect(() => {
+    // Check if device orientation API is available (mobile devices)
+    if (typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+      // iOS 13+ requires permission
+      DeviceOrientationEvent.requestPermission()
+        .then(response => {
+          if (response === 'granted') {
+            window.addEventListener('deviceorientation', handleDeviceOrientation);
+          }
+        })
+        .catch(console.error);
+    } else if (window.DeviceOrientationEvent) {
+      // Android and older iOS
+      window.addEventListener('deviceorientation', handleDeviceOrientation);
+    }
+
+    function handleDeviceOrientation(event) {
+      // Use gamma (left-right tilt) for rotation
+      // Range is typically -90 to 90 degrees
+      // Map to a smaller rotation range for subtle effect (-5 to 5 degrees)
+      if (event.gamma !== null) {
+        const rotation = Math.max(-5, Math.min(5, event.gamma * 0.1)); // Limit to -5 to 5 degrees
+        setDeviceRotation(rotation);
+      }
+    }
+
+    return () => {
+      window.removeEventListener('deviceorientation', handleDeviceOrientation);
+    };
+  }, []);
+
+  // Apply rotation to tarot card element based on device orientation
+  useEffect(() => {
+    if (tarotCardRef.current) {
+      tarotCardRef.current.style.transform = `rotate(${deviceRotation}deg)`;
+    }
+  }, [deviceRotation]);
 
   // Generate tarot card image when component mounts (if selfie is available)
   // This hook must be called before any conditional returns
@@ -88,7 +129,7 @@ function ResultsPage() {
         </div>
 
         {/* Tarot card frame - always visible */}
-        <div className="results-tarot-frame">
+        <div className="results-tarot-frame" ref={tarotCardRef}>
           {/* Type number at top */}
           {profile && (() => {
             const typeNumber = getPersonalityTypeNumber(profile);

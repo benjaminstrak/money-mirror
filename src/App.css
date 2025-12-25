@@ -863,8 +863,11 @@
   -webkit-image-rendering: pixelated;
 }
 
-.results-tarot-frame:hover {
-  transform: rotate(3deg);
+/* Hover effect only on desktop (non-touch devices) */
+@media (hover: hover) and (pointer: fine) {
+  .results-tarot-frame:hover {
+    transform: rotate(3deg);
+  }
 }
 
 /* Type number at top */
